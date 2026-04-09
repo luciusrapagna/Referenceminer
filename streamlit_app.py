@@ -6,7 +6,7 @@ import plotly.express as px
 
 # Global Variables
 NCBI_API_KEY = "ed54fab73e9a9dac3dc4e29860550d3a2108"
-ELSEVIER_API_KEY = "YOUR_ELSEVIER_API_KEY" # <--- Please replace this with your actual Elsevier API key
+ELSEVIER_API_KEY = "19eefb9f59e6a3d29da6a6e118bf6254" # 
 EMAIL = "luciusrapagna@gmail.com"
 USER_AGENT = f"AgenteBibliografico/1.0 (mailto:{EMAIL})"
 
