@@ -2,8 +2,8 @@ services:
   - type: web
     name: biblio-luciano
     env: python
-    buildCommand: "pip install --no-cache-dir --upgrade pip setuptools wheel && pip install -r requirements.txt"
-    startCommand: "streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true"
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.9  # Estável, sem 3.14 issues
+    pythonVersion: 3.11.9
+    buildCommand: |
+      pip install --upgrade pip setuptools wheel packaging --no-cache-dir
+      pip install --only-binary=all --no-cache-dir --no-build-isolation -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
